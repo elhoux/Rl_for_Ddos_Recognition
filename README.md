@@ -76,10 +76,7 @@ DDoS-Detection-Using-Entropy/
 
 ## **Screenshots**
 ### Server Output:
-![Server Screenshot](server screenshot.png)
-
-### Client Output:
-![Client Screenshot](client-output.png)
+Attached above in the folder
 
 ---
 
