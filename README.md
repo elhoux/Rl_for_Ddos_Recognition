@@ -1,92 +1,171 @@
+# Détection des Attaques DDoS par Amélioration Itérative et Apprentissage Adaptatif
 
-# DDoS Detection Using Entropy
+## Description
+Ce projet implémente un système avancé de détection d'attaques DDoS qui combine plusieurs approches complémentaires, chacune s'améliorant itérativement et contribuant à l'amélioration des autres méthodes.
 
-## **Overview**
-This project implements a **Distributed Denial of Service (DDoS)** detection system using entropy calculations. It employs a **client-server model** to simulate data packet transmission and monitors the entropy of incoming traffic to detect potential DDoS attacks.
+## Architecture du Système
 
----
+### 1. Analyse Statistique de Base
+- *Composants Initiaux :*
+- 
+  - Calcul des métriques de base (moyenne, écart-type)
+  - Détection des anomalies par score Z
+  - Seuils statiques
 
-## **Features**
-- Client-server architecture for simulating real-world data transmission.
-- Entropy-based algorithm to detect abnormal traffic patterns.
-- Threshold-based alert mechanism for detecting potential DDoS attacks.
-- Modular design for easy integration and testing.
+- *Améliorations Itératives :*
+  - Adaptation dynamique des seuils
+  - Intégration des patterns temporels
+  - Corrélation avec l'entropie IP
+  - Apprentissage des comportements normaux
 
----
+### 2. Analyse d'Entropie
+- *Base Initiale :*
+  - Calcul d'entropie des adresses IP
+  - Détection des changements brusques
 
-## **Technologies Used**
-- **Programming Language**: Java
-- **Libraries**: 
-  - `java.io` for file and network I/O
-  - `java.net` for socket communication
-- **Tools**:
-  - IDE: IntelliJ IDEA / Eclipse
-  - Build Tool: Maven (optional)
-  - Version Control: Git
+- *Améliorations :*
+  - Fenêtre glissante adaptative
+  - Combinaison avec l'analyse statistique
+  - Enrichissement par apprentissage RL
+  - Détection multi-niveaux
 
----
+### 3. Analyse Multi-Seuils Dynamiques
+- *Système Initial :*
+  - Trois niveaux de seuils fixes
+  - Adaptation basique au trafic
 
-## **Project Structure**
-```plaintext
-DDoS-Detection-Using-Entropy/
-├── src/
-│   ├── com/rhgtask/
-│   │   ├── Client.java          # Sends data packets to the server
-│   │   ├── Server.java          # Receives packets, calculates entropy
-│   │   ├── EntropyUtils.java    # Utility to calculate entropy
-│   │   ├── DetectionAlgorithm.java # Implements the detection logic
-│   └── test-data/
-│       ├── packets.txt          # Sample data packets for testing
-├── README.md                    # Project documentation
-```
+- *Évolution :*
+  - Seuils avec taux d'apprentissage différenciés
+  - Adaptation indépendante par niveau
+  - Intégration des métriques d'entropie
+  - Fusion avec les résultats RL
 
----
+### 4. Apprentissage par Renforcement (RL)
+- *Configuration de Base :*
+  - Agent RL simple
+  - États basés sur le trafic
+  - Récompenses binaires
 
-## **How It Works**
-1. The **Client** sends simulated data packets to the **Server**.
-2. The **Server** collects these packets and calculates their entropy.
-3. If the entropy exceeds a predefined threshold, the system identifies it as a potential DDoS attack.
-4. The **EntropyUtils** class implements the entropy calculation logic.
+- *Optimisations :*
+  - États enrichis (trafic, entropie, variation)
+  - Système de récompenses nuancé
+  - Apprentissage continu
+  - Adaptation des hyperparamètres
 
----
+### 5. Système de Fusion et Amélioration Continue
+- *Mécanismes d'Amélioration :*
+  - Feedback entre les méthodes
+  - Validation croisée des détections
+  - Ajustement automatique des paramètres
+  - Apprentissage des patterns d'attaque
 
-## **Setup Instructions**
-### **Prerequisites**
-- Java Development Kit (JDK) 8 or higher installed.
-- IDE (IntelliJ IDEA, Eclipse, or similar).
-- Git for version control.
+## Fonctionnalités et Interface
 
-### **Steps**
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/username/DDoS-Detection-Using-Entropy.git
-   ```
-2. Open the project in your IDE.
-3. Run the `Server.java` file to start the server.
-4. Run the `Client.java` file to send packets.
+### 1. Visualisation Avancée
+- Graphiques en temps réel pour chaque méthode
+- Indicateurs de performance combinés
+- Historique des détections
+- Analyse comparative des méthodes
 
----
+### 2. Configuration Adaptative
+- Paramètres auto-ajustables
+- Profils de détection personnalisables
+- Modes d'apprentissage et de détection
+- Calibration automatique
 
-## **Testing**
-1. Modify `packets.txt` in the `test-data` folder to simulate different packet patterns.
-2. Adjust the threshold in `Server.java` to test the detection sensitivity.
-3. Observe the server logs for entropy values and attack detection messages.
+### 3. Analyse des Performances
+- Métriques de précision par méthode
+- Évaluation des faux positifs/négatifs
+- Temps de détection
+- Efficacité de l'apprentissage
 
----
+## Installation et Prérequis
 
-## **Screenshots**
-### Server Output:
-Attached above in the folder
+### Prérequis Système
+- Java JDK 11 ou supérieur
+- Maven 3.6+
+- RAM : 4GB minimum
+- Processeur : 2 cœurs minimum
+- Espace disque : 500MB
 
----
+### Installation
 
-## **Future Enhancements**
-- Enhance the entropy calculation algorithm for more accuracy.
-- Implement a GUI for better visualization.
-- Support for multi-threaded clients to simulate real-world traffic.
-
----
-
+1. Cloner le repository :
+   bash
+   git clone https://github.com/votre-username/DDoS-Detection-Using-Entropy.git
+   cd DDoS-Detection-Using-Entropy
 
 
+2. Installer les dépendances :
+   bash
+   mvn clean install
 
+
+3. Lancer l'application :
+   bash
+   mvn exec:java -Dexec.mainClass="com.ddos.detection.MainFrame"
+
+
+## Utilisation
+
+### 1. Configuration Initiale
+- Sélection de la méthode de détection
+- Configuration des paramètres de base
+- Choix du mode (détection/apprentissage)
+
+### 2. Phase d'Apprentissage
+- Calibration des seuils
+- Entraînement du modèle RL
+- Ajustement des paramètres
+
+### 3. Phase de Détection
+- Surveillance en temps réel
+- Analyse des alertes
+- Ajustements dynamiques
+
+### 4. Analyse et Optimisation
+- Évaluation des performances
+- Ajustement des paramètres
+- Amélioration continue
+
+## Structure du Projet
+
+src/
+├── main/
+│   └── java/
+│       └── com/
+│           └── ddos/
+│               └── detection/
+│                   ├── MainFrame.java           # Interface principale
+│                   ├── StatisticalAnalyzer.java # Analyse statistique
+│                   ├── EntropyAnalyzer.java     # Analyse d'entropie
+│                   ├── ui/
+│                   │   ├── MultiThresholdWindow.java  # Interface seuils
+│                   │   ├── RLSimulationWindow.java    # Simulation RL
+│                   │   └── SimulationWindow.java      # Simulation générale
+│                   ├── stats/
+│                   │   ├── StatisticalDetector.java   # Détection statistique
+│                   │   └── EntropyCalculator.java     # Calcul d'entropie
+│                   └── rl/
+│                       ├── RLAgent.java         # Agent d'apprentissage
+│                       ├── RLEnvironment.java   # Environnement RL
+│                       └── RLManager.java       # Gestionnaire RL
+
+
+## Contribution
+Les contributions sont les bienvenues ! Pour contribuer :
+1. Fork le projet
+2. Créer une branche pour votre fonctionnalité
+3. Commiter vos changements
+4. Pousser vers la branche
+5. Ouvrir une Pull Request
+
+## Licence
+Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+
+## Auteurs
+- [Votre Nom]
+- [Autres Contributeurs]
+
+## Contact
+Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue ou à nous contacter directement.
