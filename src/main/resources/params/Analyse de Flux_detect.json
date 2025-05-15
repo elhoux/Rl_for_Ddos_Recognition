@@ -1,0 +1,7 @@
+{
+    "packets": 5000,
+    "duration": 30,
+    "ips": 50,
+    "sourcePort": 12345,
+    "destPort": 80
+} 

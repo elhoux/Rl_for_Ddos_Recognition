@@ -1,0 +1,52 @@
+{
+  "Machine Learning_fail" : {
+    "packets" : 2000,
+    "duration" : 60,
+    "ips" : 50
+  },
+  "Entropie IP_detect" : {
+    "packets" : 2000,
+    "duration" : 15,
+    "ips" : 3
+  },
+  "Heuristique_detect" : {
+    "packets" : 50,
+    "duration" : 300,
+    "ips" : 5
+  },
+  "Heuristique_fail" : {
+    "packets" : 50,
+    "duration" : 300,
+    "ips" : 5
+  },
+  "Entropie IP_fail" : {
+    "packets" : 2000,
+    "duration" : 15,
+    "ips" : 200
+  },
+  "Reinforcement Learning_fail" : {
+    "packets" : 2000,
+    "duration" : 60,
+    "ips" : 3
+  },
+  "Analyse de flux_detect" : {
+    "packets" : 5000,
+    "duration" : 60,
+    "ips" : 10
+  },
+  "Analyse de flux_fail" : {
+    "packets" : 10,
+    "duration" : 60,
+    "ips" : 10
+  },
+  "Machine Learning_detect" : {
+    "packets" : 2000,
+    "duration" : 60,
+    "ips" : 50
+  },
+  "Reinforcement Learning_detect" : {
+    "packets" : 2000,
+    "duration" : 60,
+    "ips" : 3
+  }
+}

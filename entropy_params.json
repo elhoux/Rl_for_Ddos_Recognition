@@ -1,0 +1,12 @@
+{
+  "fail" : {
+    "packets" : 2000,
+    "ips" : 200,
+    "duration" : 15
+  },
+  "detect" : {
+    "packets" : 2000,
+    "ips" : 3,
+    "duration" : 15
+  }
+}
